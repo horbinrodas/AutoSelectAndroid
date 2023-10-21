@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="razon_array">
+        <item>Disponibilidad</item>
+        <item>Cotizacion</item>
+        <item>Solicitar Test Drive</item>
+        <item>Financiamiento</item>
+        <item>Otro</item>
+    </string-array>
+</resources>

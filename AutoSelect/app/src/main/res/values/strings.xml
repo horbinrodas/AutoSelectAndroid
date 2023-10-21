@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">AutoSelect</string>
+    <string name="title_activity_busqueda">BusquedaActivity</string>
+</resources>

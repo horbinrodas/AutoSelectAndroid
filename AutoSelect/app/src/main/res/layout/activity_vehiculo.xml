@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VehiculoActivity">
+
+    <ViewFlipper
+        android:id="@+id/imageSlider"
+        android:layout_width="match_parent"
+        android:layout_height="275dp"
+        android:flipInterval="2000"
+        />
+    <Button
+        android:id="@+id/buttonPrevious"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="showPreviousImage"
+        app:layout_constraintBaseline_toBottomOf="@id/imageSlider"
+        app:layout_constraintStart_toStartOf="@id/imageSlider"
+        android:text="Button"/>
+
+    <Button
+        android:id="@+id/buttonNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="showNextImage"
+        app:layout_constraintBaseline_toBottomOf="@id/imageSlider"
+        app:layout_constraintEnd_toEndOf="@id/imageSlider"
+        android:text="Button" />
+
+    <LinearLayout
+        android:id="@+id/vehiculoLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        app:layout_constraintTop_toBottomOf="@id/imageSlider"
+        android:background="#DAD8D8"/>
+
+    <TextView
+        android:id="@+id/vehiculoDetailsText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/vehiculoLinearLayout"
+        android:layout_marginTop="20dp"
+        tools:text="Marca" />
+
+    <TextView
+        android:id="@+id/vehiculoMotorText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/vehiculoDetailsText"
+        tools:text="Motor"/>
+
+    <TextView
+        android:id="@+id/vehiculoTransmisionText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/vehiculoMotorText"
+        tools:text="Transmision"/>
+    <ImageView
+        android:id="@+id/buttonCompartir"
+        android:onClick="Compartir"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/share"
+        app:layout_constraintEnd_toEndOf="@id/vehiculoDetailsText"
+        app:layout_constraintBottom_toBottomOf="@id/vehiculoDetailsText"/>
+
+    <ImageView
+        android:id="@+id/imageViewContact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/autoselect"
+        app:layout_constraintTop_toBottomOf="@id/vehiculoTransmisionText" />
+
+    <Button
+        android:id="@+id/buttonShowContact"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="CONTACTAR"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewContact"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/contactCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="10dp"
+        android:background="@color/cardview_light_background"
+        android:visibility="gone">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <EditText
+                android:id="@+id/nombreContactInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:hint="Nombre"/>
+            <EditText
+                android:id="@+id/emailContactInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:hint="Email"/>
+            <EditText
+                android:id="@+id/telefonoContactInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:hint="Telefono"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:hint="Razon"/>
+            <Spinner
+                android:id="@+id/razonSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:entries="@array/razon_array"
+                />
+            <EditText
+                android:id="@+id/mensajeContactInput"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:hint="Mensaje"/>
+            <Button
+                android:id="@+id/buttonSendContact"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:onClick="Contact"
+                android:text="ENVIAR"
+                android:textColor="@color/black"
+                app:cornerRadius="32dp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    tools:context=".InformacionActivity">
+
+    <ImageView
+        android:id="@+id/logoInformacion"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/auto_select1"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+        android:id="@+id/tecnicoImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/tecnico"
+        android:scaleType="centerCrop"
+        android:layout_below="@id/logoInformacion" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Estamos para ayudar"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:layout_below="@id/tecnicoImage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tecnicoImage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:background="#2196F3"
+        android:onClick="openAutoSelectWebsite"
+        android:text="AutoSelect en línea"
+        android:textColor="#070707"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tecnicoImage"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="127dp"
+        android:layout_marginEnd="88dp"
+        android:text="Contactanos en redes sociales"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="16dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="WhatsApp"
+            android:onClick="openWhatsAppLink"
+            android:scaleType="fitCenter"
+            android:src="@drawable/whats" />
+
+        <ImageView
+            android:id="@+id/facebookIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/facebook" />
+
+        <ImageView
+            android:id="@+id/instagramIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/insta" />
+    </LinearLayout>
+</RelativeLayout>
